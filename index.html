@@ -1,10 +1,101 @@
 <div id="app">
   <h1>JAVASCRIPT PIPE AND COMPOSE</h1>
   <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>
+      Can we make a only one function call instead of multiple function calls?
+      This is called a nested function calls
+    </li>
+    <li>
+      Nested function calling is a not a bad way but it way of looking not a
+      nice and mostly we loss some readability of code.
+    </li>
+    <li>
+      <p>
+        'pipe' is nothing but a simple function in javascript.That function
+        accepts the any number of functions as arguments and reducing like one
+        by one by solving each function and that solved function output makes
+        input of the another function call inside reduce.This chaining process
+        will continue untill the last function solve.
+      </p>
+      <h3>Breakdown of pipe definition:</h3>
+      <ol>
+        <li>
+          Pipe is a function that takes an argument with a spread operator
+          variable. that means we can pass N number of functions as arguments
+          for pipe
+        </li>
+        <li>
+          That function returns a another function that function takes argument
+          as our input value.Here we would know about one thing pipe function
+          acts as a HigherOrderFunction.
+        </li>
+        <li>
+          Returned function will process the each and every function one by one
+          using Array.reduce Like one function result will be input of another
+          function this process will continue untill all the functions are
+          excuted.so that’s one of the reason we use spread operator argument in
+          the pipe function
+        </li>
+      </ol>
+    </li>
+    <li>
+      <h3>How does Array.reduce() work?</h3>
+      <ul>
+        <li>
+          Array.Reduce will accept the two arguments first one is a function and
+          second one is a parameter which acts as default value.That default
+          value act’s as a first argument of function which we will provided as
+          a first argument to Array.reduce
+        </li>
+        <li>
+          Inside function each time running and initially first argument takes
+          as a default value and second argument will be first value in the
+          array then returned value from that function act’s as a first argument
+          for that function this chaining process will be continue untill array
+          will be reduced
+        </li>
+      </ul>
+    </li>
+    <li>
+      <h3>What’s The Compose?</h3>
+      <ol>
+        <li>Compose is the mirror to the pipe concept</li>
+        <li>
+          Observe carefully in the pipe function it can resolve functions from
+          left to right when we passing arguments to the pipe function
+        </li>
+        <li>
+          In that Like Same way compose will resolve the Right to Left so when
+          we passing arguments to the compose function
+        </li>
+        <li>
+          “we will pass which function will execute the last that one first
+          arugument to compose function”
+        </li>
+        <li>
+          “The function which will execute the first that one last argument to
+          comose function”
+        </li>
+        <li>
+          like the way we pass reverse order of pipe function arguments for the
+          compose function
+        </li>
+      </ol>
+    </li>
+    <li>
+      <h3>Why pipe functions named as pipe?</h3>
+      <p>
+        “The concept of pipe is simple it combines n functions. It’s a pipe
+        flowing left-to-right, calling each function with the output of the last
+        one. Let’s write a function that returns someone’s name”.
+      </p>
+    </li>
   </ul>
+  <p>
+    Source:
+    <a
+      href="https://medium.com/@guru.raghavendra7233/javascript-pipe-and-compose-1432eca157ba"
+      >Pipe and Compose By Guru Raghavendra
+    </a>
+  </p>
 </div>
